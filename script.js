@@ -1,5 +1,5 @@
 let form = document.getElementById ('form');
-let check = document.getElementById('check');
+let isChecked = document.getAttribute('checked(this.checked)')
 let nomber = 4;
 
 form.addEventListener ('submit', function(event){
@@ -10,18 +10,20 @@ if (!input.value) {
       return;
    }
   
-addEventListener('check', (e) => {
+isChecked.addEventListener('isCheked', () => {
 
-   let theme = document.getElementById('theme');
+      let theme = document.getElementById('theme');
 
-   if (theme.getAttribute('href') == 'styles.css'){
-      theme.href = 'dark.css';
-      }   else {
-      theme.href = 'styles.css'
+      if (theme.getAttribute('href') == 'styles.css') {
+         theme.href = 'dark.css';
+      } else {
+         theme.href = 'styles.css';
       }
-      
-   return(input.value = '');
-} );
+
+      return (input.value = '');
+   });
+
+
 
 let myText = document.getElementById('myText');
 myText.insertAdjacentHTML('beforeend', '<div class = "nomber">'+'<h2 >'+"Задача "+nomber+'</h2>'+'<p>'+input.value+'</p/div>');
