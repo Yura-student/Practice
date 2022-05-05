@@ -18,6 +18,7 @@ body {
     background: #00333dbd;
     color: rgb(23, 150, 55);
     animation: spin 4s linear infinite alternate;
+    position: relative;
 }
 
 @keyframes spin {
