@@ -1,44 +1,40 @@
-let form = document.getElementById ('form');
-let isChecked = document.getElementById('check');
+let form = document.getElementById("form");
+let isChecked = document.getElementById("check");
 let nomber = 4;
 
-form.addEventListener ('submit', function(event){
-   event.preventDefault();
-   const input = document.getElementById('text');
 
-if (!input.value) {
-      return;
-   }
-  
-isChecked.addEventListener('click', () => {
+isChecked.addEventListener('change', () => {
+   document.body.classList.toggle('dark')
+   localStorage.setItem('dark', isChecked.checked )
 
-      let theme = document.getElementById('theme');
+});
 
-      if (theme.getAttribute('href') == 'styles.css') {
-         theme.href = 'dark.css';
-      } else {
-         theme.href = 'styles.css';
-      }
+if(localStorage.getItem('dark') === 'true'){
+   document.body.classList.add('dark')
+   isChecked.checked = true
+   };
 
-      return (input.value = '');
-   });
+form.addEventListener("submit", function (event) {
+  event.preventDefault();
+  const input = document.getElementById("text");
 
-/* const handelChange = (isChecked) => {
-   if (isChecked) {
-      let theme = document.getElementById('theme');
+  if (!input.value) {
+    return;
+  }
 
-      if (theme.getAttribute('href') == 'styles.css') {
-         theme.href = 'dark.css';
-      } else {
-         theme.href = 'styles.css';
-      }
-      return (input.value = '');
-   }
-} */
+  let myText = document.getElementById("myText");
+  myText.insertAdjacentHTML(
+    "beforeend",
+    '<div class = "nomber">' +
+      "<h2 >" +
+      "Задача " +
+      nomber +
+      "</h2>" +
+      "<p>" +
+      input.value +
+      "</p/div>"
+  );
 
-let myText = document.getElementById('myText');
-myText.insertAdjacentHTML('beforeend', '<div class = "nomber">'+'<h2 >'+"Задача "+nomber+'</h2>'+'<p>'+input.value+'</p/div>');
-
-nomber++;
-input.value = ''
-})
+  nomber++;
+  input.value = "";
+});
