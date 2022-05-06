@@ -5,7 +5,8 @@ body {
     color:black;
     font-size: 16px;
     font-family: 'Roboto', sans-serif;
-    transition: 350ms;
+    transition: all 350ms;
+
 }
 
 .container {
@@ -18,6 +19,7 @@ body {
     background: #00333d;
     color: white;
     position: relative;
+    transition: all;
     
 }
 
@@ -25,6 +27,7 @@ body {
     margin: 0px;
     margin-left: auto;
     text-align: center;
+    transition: all;
 }
 
 .two {
@@ -37,6 +40,7 @@ body {
 input::placeholder {
     color: red;
     font-size: 60px;
+    transition: all;
 }
 
 .two input {
@@ -50,6 +54,7 @@ input::placeholder {
     padding-left: 10px;
     border-right-color: #a6c5ca;
     border-bottom-color: #a6c5ca;
+    transition: all;
 }
 
 .add {
@@ -65,10 +70,12 @@ input::placeholder {
     background: #5a9aa3;
     cursor: pointer;
     padding: 0px 20px;
+    transition: all;
 }
 
 .add button:hover {
     background: #054d50;
+    transition: all;
 }
 
 .flex {
@@ -85,12 +92,14 @@ input::placeholder {
     padding: 0 15px;
     margin-bottom: 20px;
     display: flex;
+    transition: all;
 }
 
 .nomber h2 {
     min-width: 120px;
     padding: 15px 0;
     margin: 0px;
+    transition: all;
 }
 
 .nomber p {
@@ -102,6 +111,6 @@ input::placeholder {
     position: absolute;
     right: 20px;
     margin: 0;
-    top: 50%;
+    top: calc(50% - 6.4px);
     transform: scale(2);
 }
