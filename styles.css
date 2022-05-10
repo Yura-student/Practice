@@ -130,7 +130,7 @@ input::placeholder {
     background: #00333d;
     box-shadow: inset 0 0 1px;
     border-radius: 15px;
-    outline: 1px solid white;
+    border: 1px solid white;
     -webkit-appearance: none;
     transition: 250ms;
 }
@@ -138,8 +138,8 @@ input::placeholder {
 #check::before {
     content: '';
     position: absolute;
-    width: 15px;
-    height: 15px;
+    width: 1em;
+    height: 1em;
     border-radius: 15px;
     top: 0;
     left: 0;
