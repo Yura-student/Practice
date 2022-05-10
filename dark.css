@@ -80,7 +80,7 @@ body.dark  {
 
 .dark #check{
     background: rgb(24, 187, 65);
-    outline: none;
+    outline-color: #082e35;
 }
 
 .dark #check::before{
