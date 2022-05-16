@@ -161,6 +161,7 @@ input::placeholder {
     box-shadow: inset 0 0 1px;
     border-radius: 10px;
     border: 1px solid white;
+    box-sizing: content-box;
     -webkit-appearance: none;
     transition: 250ms;
 }
@@ -171,11 +172,11 @@ input::placeholder {
     width: 15px;
     height: 15px;
     border-radius: 10px;
-    top: -1px;
-    left: -1px;
+    top: 0px;
+    left: 0px;
     background: white;
     box-shadow: 0 2px 5px;
     transition: 250ms;
-    transform: scale(0.8);
+    transform: scale(0.9);
 }
 
