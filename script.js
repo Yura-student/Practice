@@ -14,11 +14,23 @@ if(localStorage.getItem('dark') === 'true'){
    isChecked.checked = true
    };
 
+let fakeButton = document.querySelector('.delet');
+fakeButton.addEventListener('click', () => {
+  let buttonDel = document.querySelector('.buttonDel');
+console.log(buttonDel.style.display === 'none');
+  if(buttonDel.style.display === 'none') {
+    buttonDel.style.display = 'flex';
+  }
+  else {
+    buttonDel.style.display = 'none';
+  }
+});
+
 
 document.querySelector('main').addEventListener('click', removePara);
 
 function removePara(e) {
-  const isDelete = e.target.closest('.delet');
+  const isDelete = e.target.closest('.buttonDel');
   if(isDelete){
     isDelete.parentNode.remove();
   }
