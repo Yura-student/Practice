@@ -126,6 +126,7 @@ input::placeholder {
     min-width: 30px;
     width: 40px;
     height: 15px;
+    cursor: pointer;
     border: none;
     border-radius: 4px;
     border: 1px solid #f1f1f1;
@@ -178,5 +179,33 @@ input::placeholder {
     box-shadow: 0 2px 5px;
     transition: 250ms;
     transform: scale(0.9);
+}
+
+.box{
+    display: flex;
+}
+
+.box > .nomber {
+    width: 100%;
+}
+
+.buttonDel {
+    display: none;
+    margin-bottom: 20px;    
+}
+
+.buttonDel button {
+    background: #e51b1b;
+    border: 1px;
+    color: #e9e6e6;
+    justify-content: center;
+    align-items: center;
+    width: 6em;
+    cursor: pointer;
+    margin-left: 0.5em;
+}
+
+.buttonDel button:hover {
+    background: #ff3232;
 }
 
